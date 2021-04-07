@@ -2,6 +2,7 @@ package co.com.devco.stepdefinitions;
 
 import co.com.devco.exceptions.ResultadoDeBusquedaInesperado;
 import co.com.devco.questions.PrimerResultadoGoogle;
+import co.com.devco.questions.PrimerResultadoPetBook;
 import co.com.devco.tasks.BuscarEnGoogle;
 import co.com.devco.tasks.ClickenPetbook;
 import cucumber.api.PendingException;
@@ -21,10 +22,14 @@ public class PetBookSearchStepDefinitions {
 
     }
 
-    @Entonces("^debe ver como resultados Imagenes de (.*)$")
-    public void debeVerComoResultadosImagenesDe(String Animales) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @Entonces("^debe ver como mínimo un resultado Imagenes de (.*)$")
+    public void debevercomomínimounresultadoImagenesde(String Animal) {
+        //theActorInTheSpotlight().attemptsTo();
+        theActorInTheSpotlight().should(seeThat(
+                PrimerResultadoPetBook.es(Animal)).orComplainWith(
+                ResultadoDeBusquedaInesperado.class, ENCONTRADO_OTRO_RESULTADO
+        ));
+
     }
 
     @Entonces("^debe ver como resultados Imagenes de Todas las mascotas$")

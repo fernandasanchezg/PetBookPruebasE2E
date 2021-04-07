@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Attribute;
 
-import static co.com.devco.userinterfaces.GoogleResultadosPage.PRIMER_RESULTADO;
+import static co.com.devco.userinterfaces.PetBookSearchPage.PRIMER_RESULTADO;
 
 public class PrimerResultadoPetBook implements Question<Boolean> {
     private String resultado;
@@ -19,7 +19,7 @@ public class PrimerResultadoPetBook implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        String resultadoEncontrado = Attribute.of(PRIMER_RESULTADO).named("href").viewedBy(actor).asString();
+        String resultadoEncontrado = Attribute.of(PRIMER_RESULTADO).named("src").viewedBy(actor).asString();
         return resultadoEncontrado.contains(resultado);
     }
 }
