@@ -20,6 +20,6 @@ public class PrimerResultadoPetBook implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         String resultadoEncontrado = Attribute.of(PRIMER_RESULTADO).named("src").viewedBy(actor).asString();
-        return resultadoEncontrado.contains(resultado);
+        return resultadoEncontrado.contains(resultado) ;
     }
 }

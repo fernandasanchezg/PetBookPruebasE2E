@@ -30,7 +30,7 @@ public class ClickenPetbook implements Task {
     }
 
     @Override
-    public <T extends Actor> void performAs(T actor) {
+    public <T extends Actor> void performAs(T actor)  {
         switch (nombreBoton){
             case "perro":
                 actor.attemptsTo(

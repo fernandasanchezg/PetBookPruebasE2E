@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
 		glue = {"co.com.devco.stepdefinitions"},
 		snippets = SnippetType.CAMELCASE
 )
-public class PetBookSearchRunner {
+public class  PetBookSearchRunner {
 
 }

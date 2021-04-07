@@ -3,7 +3,7 @@ package co.com.devco.userinterfaces;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class PetBookSearchPage {
+public class  PetBookSearchPage {
 	public static final String PETBOOK_HOME_PAGE = "http://localhost:4200/";
 	public static final Target BOTON_PERRO = Target.the("Boton perro en Petbook").located(By.xpath("//*[@id='btnperro']"));
 	public static final Target BOTON_GATO = Target.the("Boton gato en Petbook").located(By.xpath("//*[@id='btngato']"));

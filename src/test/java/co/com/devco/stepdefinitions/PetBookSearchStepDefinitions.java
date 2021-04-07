@@ -33,7 +33,7 @@ public class PetBookSearchStepDefinitions {
     }
 
     @Entonces("^debe ver como resultados Imagenes de Todas las mascotas$")
-    public void debeVerComoResultadosImagenesDeTodasLasMascotas() {
+     public void debeVerComoResultadosImagenesDeTodasLasMascotas() {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
